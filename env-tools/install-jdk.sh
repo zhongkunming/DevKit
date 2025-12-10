@@ -89,5 +89,5 @@ echo "$CONFIG_BLOCK" >> "$PROFILE_FILE"
 
 echo "-------------------------------------------------"
 echo "JDK ${JDK_MAJOR_VERSION} 安装配置完成!"
-echo "请执行 'source ${PROFILE_FILE}' 使其生效。"
+echo "请执行 source ${PROFILE_FILE} 使其生效。"
 echo "-------------------------------------------------"

@@ -114,6 +114,6 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "-------------------------------------------------"
-echo "Maven 安装和配置完成!"
-echo "请执行 'source ${PROFILE_FILE}' 使新配置生效。"
+echo "Maven ${MAVEN_VERSION} 安装和配置完成!"
+echo "请执行 source ${PROFILE_FILE} 使新配置生效。"
 echo "-------------------------------------------------"

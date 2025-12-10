@@ -102,7 +102,8 @@ fi
 CONFIG_BLOCK=$(cat << EOF
 ${MVND_START}
 export MVND_HOME="${MVND_FINAL_PATH}"
-export PATH=\$MVND_HOME/bin:\$PATH
+export MVN_HOME="${MVND_FINAL_PATH}/mvn"
+export PATH=\$MVND_HOME/bin:\$MVN_HOME/bin:\$PATH
 ${MVND_END}
 EOF
 )
@@ -146,25 +147,6 @@ fi
 
 
 echo "-------------------------------------------------"
-echo "Maven Daemon (mvnd) 版本 ${MVND_VERSION} 安装和配置完成!"
-echo "安装路径: $MVND_FINAL_PATH"
-echo "请执行以下命令使配置生效:"
-echo "source $PROFILE_FILE"
+echo "Maven Daemon ${MVND_VERSION} 安装和配置完成!"
+echo "请执行 source ${PROFILE_FILE} 使新配置生效。"
 echo "-------------------------------------------------"
-
-# 验证安装
-echo "验证安装..."
-if [ -f "$MVND_FINAL_PATH/bin/mvnd" ]; then
-    echo "mvnd 可执行文件已就绪。"
-    echo "安装完成后，您可以使用以下命令检查版本："
-    echo "mvnd --version"
-    echo ""
-    echo "mvnd 相比传统 maven 具有更快的启动速度和构建性能。"
-    echo "常用命令："
-    echo "  mvnd clean          - 清理项目"
-    echo "  mvnd compile        - 编译项目"
-    echo "  mvnd package        - 打包项目"
-    echo "  mvnd install        - 安装到本地仓库"
-else
-    echo "警告: 未找到 mvnd 可执行文件，请检查安装过程。"
-fi
