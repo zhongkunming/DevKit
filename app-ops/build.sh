@@ -75,7 +75,7 @@ maven_build() {
     cd "${WORKSPACE_ROOT}" || exit 1
 
     echo "执行 Maven 打包 ..."
-    "${M2_CMD}" clean install -DskipTests -q -B
+    "${M2_CMD}" clean package -DskipTests -q -B
 
     if [ $? -ne 0 ]; then
         echo "错误: Maven 打包失败。"
