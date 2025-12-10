@@ -14,7 +14,7 @@ fi
 MAVEN_START="# === START APACHE MAVEN CONFIG (Managed by install-maven-complete.sh) ==="
 MAVEN_END="# === END APACHE MAVEN CONFIG (Managed by install-maven-complete.sh) ==="
 
-MAVEN_MIRROR_URL="http://172.23.23.10:51001/repository/maven-public"
+MAVEN_MIRROR_URL="http://172.23.23.10:51001/maven-public"
 MAVEN_USER_CONFIG_DIR="$HOME/.m2"
 MAVEN_USER_CONFIG_FILE="$MAVEN_USER_CONFIG_DIR/settings.xml"
 
@@ -99,8 +99,8 @@ cat << EOF > "$MAVEN_USER_CONFIG_FILE"
 
   <mirrors>
     <mirror>
-      <id>nexus-mirror</id>
-      <name>Nexus Mirror</name>
+      <id>mirror</id>
+      <name>mirror</name>
       <url>${MAVEN_MIRROR_URL}</url>
       <mirrorOf>*</mirrorOf>
     </mirror>

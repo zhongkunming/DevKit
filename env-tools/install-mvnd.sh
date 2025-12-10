@@ -13,7 +13,7 @@ fi
 MVND_START="# === START APACHE MVND CONFIG (Managed by install-mvnd.sh) ==="
 MVND_END="# === END APACHE MVND CONFIG (Managed by install-mvnd.sh) ==="
 
-MVND_MIRROR_URL="http://172.23.23.10:51001/repository/maven-public"
+MVND_MIRROR_URL="http://172.23.23.10:51001/maven-public"
 MVND_USER_CONFIG_DIR="$HOME/.m2"
 MVND_USER_CONFIG_FILE="$MVND_USER_CONFIG_DIR/settings.xml"
 
@@ -131,8 +131,8 @@ cat << EOF > "$MVND_USER_CONFIG_FILE"
 
   <mirrors>
     <mirror>
-      <id>nexus-mirror</id>
-      <name>Nexus Mirror</name>
+      <id>mirror</id>
+      <name>mirror</name>
       <url>${MVND_MIRROR_URL}</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
